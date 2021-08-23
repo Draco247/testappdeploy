@@ -91,6 +91,7 @@ def pick_server(): # picking server
     rooms = request.args.get('rooms') # The number of rooms required 
     adults = request.args.get('adults') # The number of adults 
     children = request.args.get('children') # The number of chidlren 
+    ages = request.args.get('ages')
 
     # Setting default values if none are added
     if len(rooms) == 0 or len(rooms) is None:
@@ -102,11 +103,11 @@ def pick_server(): # picking server
 
     # Creating a new query that will get sent to the web scraper
     if server == "EU":
-        url_req = eu_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children 
+        url_req = eu_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children + "&ages=" +ages
     elif server == "UK":
-        url_req = uk_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children 
+        url_req = uk_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children + "&ages=" +ages
     elif server == "US":
-        url_req = us_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children
+        url_req = us_server + "?name=" + name + "&address=" + address + "&check_in=" + check_in + "&check_out=" + check_out + "&rooms=" + rooms + "&adults=" + adults + "&children=" + children + "&ages=" +ages
     hotel_results = requests.get(url_req)
     
     return hotel_results.text # This will return the result from the web scraper back to the getServer function
