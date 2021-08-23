@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hotel Search</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <!-- HTML--> 
+    <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="popUpBox">
+                <div class="popUpHeader">
+                    <div class="Results">Results</div>
+                    <div class="message">You won't find cheaper prices anywhere else</div>
+                </div>
+                <div class="popUpBody">
+                    <div class="hotels">
+                        <span class="hotel_name"> Hotels.com</span>
+                        <div class="hotel_price">
+                            <div class="price1">
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="hotels">
+                        <span class="hotel_name"> Booking.com</span>
+                        <div class="price2">
+                            <img class="dots" src="{{ url_for('static', filename='dots.gif') }}">
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="hotels">
+                        <div class="hotel_name"> Expedia.com</div>
+                        <img class="dots" src="{{ url_for('static', filename='dots.gif') }}">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endwith %}
+    </body>
+</html>

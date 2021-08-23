@@ -1,0 +1,63 @@
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    .popUpBox{
+        border-radius: 10px;
+        background-color: #fefefe;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        width: 200px;
+        height: 220px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .popUpHeader{
+        border-top-left-radius: 7.5px;
+        border-top-right-radius: 7.5px;
+        background-color:#ff834f;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .Results{
+        padding-left: 20px;
+        padding-top: 10px;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    .Scuttlr_Price{
+        padding-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .popUpBody{
+        position: relative;
+        top: 5%;
+    }
+
+    .hotels{
+        color: #444444;
+        padding: 5px 5px;
+    }
+    .hotel_name{
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 5px;
+        
+    }
+
+    .price1{
+        position: relative;
+        float: right;
+        font-weight: bold;
+        padding-right: 10px;
+
+    }
+
+    img.dots{
+        width: 30px;
+        height: auto;
+    }
